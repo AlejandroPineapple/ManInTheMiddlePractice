@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sat.gob.mx/cfd/4 http://www.sat.gob.mx/sitio_internet/cfd/4/cfdv40.xsd" Version="4.0" Serie="A" Folio="12345" Fecha="2024-03-05T12:00:00" FormaPago="01" CondicionesDePago="Contado" SubTotal="1000.00" Moneda="MXN" Total="1160.00" TipoDeComprobante="I" MetodoPago="PUE" LugarExpedicion="64000" Sello="CwJAG6yIjn2AinDGFy+yPz8m4mtonKNS320M/pl46pqnKk8MD4H4WmvToFawhctXJn6Duh4uxG4unOeR+STbnQtlpMQmMXzpwkJhdEkmncQMzsQUKt6OsQvIq7fLUdV8DZaVsFDS9JV15AQprxM7ng+nVHi4RdAmdXuAYQlFg3JupRWPh2Y+AVBUA3to5wiXBw1mGJy8D8aEiNwb5UPSONDG/wVZLYf8EJwP/NhDMU3JND5i09gopHpBbxL5Up3Fhb5434CnxcbzORB5u3s+P1qpUmsvxtF/noP0dnRu/sISBNT2BiXXc4CRy3d86L0ntLMXtqqKrJSWI8of2XsvLA==">
+
+    <cfdi:Emisor Rfc="AAA010101AAA" Nombre="EMPRESA EMISORA S.A. DE C.V." RegimenFiscal="601"/>
+    
+    <cfdi:Receptor Rfc="BBB020202BBB" Nombre="CLIENTE EJEMPLO" UsoCFDI="G03"/>
+    
+    <cfdi:Conceptos>
+        <cfdi:Concepto ClaveProdServ="01010101" Cantidad="1" ClaveUnidad="H87" Descripcion="Producto de prueba" ValorUnitario="1000.00" Importe="1000.00">
+            
+            <cfdi:Impuestos>
+                <cfdi:Traslados>
+                    <cfdi:Traslado Base="1000.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="160.00"/>
+                </cfdi:Traslados>
+            </cfdi:Impuestos>
+        </cfdi:Concepto>
+    </cfdi:Conceptos>
+
+    <cfdi:Impuestos TotalImpuestosTrasladados="160.00">
+        <cfdi:Traslados>
+            <cfdi:Traslado Base="1000.00" Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="160.00"/>
+        </cfdi:Traslados>
+    </cfdi:Impuestos>
+
+</cfdi:Comprobante>
